@@ -6,21 +6,25 @@ Accept: application/json
 ### Create a user
 POST {{UserManagementAPI_HostAddress}}/users
 Content-Type: application/json
+Authorization: Bearer mysecrettoken
 
 {
-  "Name": "Alice",
-  "Email": "alice@example.com"
+  "Name": "alice",
+  "Email": "alice2@example.com"
 }
 
 ### Get all users
 GET {{UserManagementAPI_HostAddress}}/users
+Authorization: Bearer mysecrettoken
 
 ### Get user by id
-GET {{UserManagementAPI_HostAddress}}/users/1
+GET {{UserManagementAPI_HostAddress}}/users/4
+Authorization: Bearer mysecrettoken
 
 ### Update user
 PUT {{UserManagementAPI_HostAddress}}/users/1
 Content-Type: application/json
+Authorization: Bearer mysecrettoken
 
 {
   "Name": "Alice Updated",
@@ -29,3 +33,8 @@ Content-Type: application/json
 
 ### Delete user
 DELETE {{UserManagementAPI_HostAddress}}/users/1
+Authorization: Bearer mysecrettoken
+
+###
+GET {{UserManagementAPI_HostAddress}}/users/throw
+Authorization: Bearer mysecrettoken
