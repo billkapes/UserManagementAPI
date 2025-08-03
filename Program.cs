@@ -116,6 +116,7 @@ app.MapDelete("/users/{id:int}", (int id) =>
     users.TryRemove(id, out _) ? Results.NoContent() : Results.NotFound()
 );
 
+// Example endpoint to throw an exception
 app.MapGet("/users/throw", (HttpContext context) => throw new Exception("Test exception"));
 
 app.Run();

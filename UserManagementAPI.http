@@ -1,8 +1,5 @@
 @UserManagementAPI_HostAddress = http://localhost:5123
 
-GET {{UserManagementAPI_HostAddress}}/weatherforecast/
-Accept: application/json
-
 ### Create a user
 POST {{UserManagementAPI_HostAddress}}/users
 Content-Type: application/json
@@ -18,7 +15,7 @@ GET {{UserManagementAPI_HostAddress}}/users
 Authorization: Bearer mysecrettoken
 
 ### Get user by id
-GET {{UserManagementAPI_HostAddress}}/users/4
+GET {{UserManagementAPI_HostAddress}}/users/1
 Authorization: Bearer mysecrettoken
 
 ### Update user
@@ -35,6 +32,6 @@ Authorization: Bearer mysecrettoken
 DELETE {{UserManagementAPI_HostAddress}}/users/1
 Authorization: Bearer mysecrettoken
 
-###
+### Throw an exception
 GET {{UserManagementAPI_HostAddress}}/users/throw
 Authorization: Bearer mysecrettoken
